@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&family=Outfit:wght@100;200&display=swap');
+
+/* Reset e configurações básicas */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(0deg, #000000 100%, #ffffff 0%); /* Gradiente de preto para branco */
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Interface e containers */
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+}
+
+/* Botão de contato */
+.btn-contato button {
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #ffffff;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+button:hover,
+form .btn-enviar input:hover {
+    box-shadow: 0px 0px 8px #ffffff;
+    transform: scale(1.05);
+}
+
+/* Título com destaque */
+h2.titulo {
+    color: #fff;
+    font-size: 38px;
+    text-align: center;
+}
+
+h2.titulo span {
+    color: #858585;
+}
+
+/* Estilo das Especialidades */
+section.especiliadades {
+    padding: 40px 4%;
+}
+
+section.especiliadades .flex {
+    gap: 60px;
+}
+
+.especiliadades .especialidades-box {
+    color: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    margin-top: 45px;
+    transition: .2s;
+}
+
+.especiliadades .especialidades-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ffffff78;
+}
+
+.especiliadades .especialidades-box i {
+    font-size: 70px;
+    color: #858585;
+    
+}
+
+.especiliadades .especialidades-box h3 {
+    font-size: 28px;
+    margin: 15px 0;
+}
+
+/* Estilo do Portfólio */
+section.portfolio {
+    padding: 80px 4%;
+    box-shadow: 0 0 40px 10px #ffffff1d;
+}
+
+section.portfolio .flex {
+    justify-content: space-around;
+    margin-top: 60px;
+}
+
+.img-port {
+    width: 360px;
+    height: 460px;
+    background-size: cover;
+    background-position: 100% 0%;
+    transition: 8s;
+    cursor: pointer;
+    border-radius: 40px;
+    position: relative;
+}
+
+.img-port:hover {
+    background-position: 100% 100%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000b8;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: #fff;
+    opacity: 0;
+    transition: .5s;
+}
+
+.overlay:hover {
+    opacity: 1;
+}
+
+/* ESTILO DO RODAPÉ */
+
+footer {
+    padding: 40px 4%;
+    box-shadow: 0 0 40px 10px #ffffff1d;
+}
+
+footer .flex {
+    justify-content: space-between;
+}
+
+footer .line-footer {
+    padding: 20px 0;
+}
+
+.borda {
+    border-top: 2px solid #ffffff;
+}
+
+footer .line-footer p i {
+    color: #ffffff;
+    font-size: 22px;
+}
+
+footer .line-footer p a {
+    color: #fff;
+}
+
+.btn-social button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background-color: #ffffff;
+    font-size: 22px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: .2s;
+}
+
+/* Efeito Parallax com as ondas */
+.ondas-box {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('https://images.unsplash.com/photo-1582641857491-7e9987c2e415?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 40px;
+    color: white;
+    z-index: 10;
+    position: relative;
+    gap: 10px
+}
+
+.conteudo {
+    padding: 100px;
+ 
+}
+
+.conteudo h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.conteudo p {
+    font-size: 1.5em;
+}
+
+.onda {
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    background-image: url('images/wave.png');
+    background-size: 1000px 100px;
+    animation: ondaAnimada 5s ease-in-out infinite alternate;
+}
+
+#onda1 {
+    z-index: 1000;
+    opacity: 1;
+    background-position-x: 400px;
+}
+
+#onda2 {
+    z-index: 999;
+    opacity: 0.5;
+    background-position-x: 300px;
+}
+
+#onda3 {
+    z-index: 998;
+    opacity: 0.2;
+    background-position-x: 200px;
+}
+
+#onda4 {
+    z-index: 997;
+    opacity: 0.8;
+    background-position-x: 100px;
+}
+
+@keyframes ondaAnimada {
+    0% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(10px);
+    }
+}
+
+
+
+
+
+
+/* Seção de Gradiente (transição de branco para preto) */
+.gradiente-section {
+    height: 100vh;
+    background: linear-gradient(white, black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gradiente-section h2 {
+    color: white;
+    font-size: 36px;
+}
+
+
+
+
+.container {
+    max-width: 1280px;
+    margin: auto;
+    background-color: rgba(235, 235, 235, 0.8);
+    padding: 15px 4%; /* Diminui o padding quando rolar para reduzir ainda mais a altura */
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+
+ 
+}
+
+.flex_2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header {
+    width: 100%;
+    padding: 30px 0%; /* Diminui o padding para reduzir a altura do menu */
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    transition: .5s;
+}
+
+header.rolagem {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 15px 4%; /* Diminui o padding quando rolar para reduzir ainda mais a altura */
+}
+
+header.rolagem a, header.rolagem i {
+    color: #ffffff;
+}
+
+header i {
+    font-size: 24px; /* Diminui o ícone */
+    color: #ffffff;
+}
+
+header ul {
+    list-style-type: none;
+}
+
+header ul li {
+    display: inline-block;
+    margin: 0 20px; /* Diminui a margem entre os itens do menu */
+}
+
+header ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px; /* Diminui o tamanho da fonte dos links do menu */
+}
+
+.btn-contato button {
+    width: 100px; /* Diminui a largura do botão de contato */
+    height: 35px;  /* Diminui a altura do botão de contato */
+    border: 0;
+    background-color: #ffffff;
+    color: #fff;
+    cursor: pointer;
+    transition: .2s;
+}
