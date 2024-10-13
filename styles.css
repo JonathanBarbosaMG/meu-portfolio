@@ -217,7 +217,7 @@ footer .line-footer p a {
     height: 100px;
     position: absolute;
     bottom: 0;
-    background-image: url('images/wave.png');
+    background-image: url('wave.png');
     background-size: 1000px 100px;
     animation: ondaAnimada 5s ease-in-out infinite alternate;
 }
